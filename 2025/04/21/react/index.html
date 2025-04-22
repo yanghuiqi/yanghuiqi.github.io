@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="CreateElement12345678910111213141516171819202122232425262728293031&#x2F;&#x2F; 虚拟 DOM 结构const element &#x3D; &#123;  type: &quot;div&quot;, &#x2F;&#x2F; 标签名  props: &#123;    &#x2F;&#x2F; 节点属性，包含 children    title: &quot;foo&quot;, &#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React">
+<meta property="og:url" content="http://example.com/2025/04/21/react/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="CreateElement12345678910111213141516171819202122232425262728293031&#x2F;&#x2F; 虚拟 DOM 结构const element &#x3D; &#123;  type: &quot;div&quot;, &#x2F;&#x2F; 标签名  props: &#123;    &#x2F;&#x2F; 节点属性，包含 children    title: &quot;foo&quot;, &#x2F;">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-04-21T12:07:37.231Z">
+<meta property="article:modified_time" content="2025-04-21T12:07:37.231Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2025/04/21/react/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>React | Hexo</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Hexo</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/04/21/react/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          React
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2025-04-21 20:07:37" itemprop="dateCreated datePublished" datetime="2025-04-21T20:07:37+08:00">2025-04-21</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <!--
+ * @Description: react
+ * @Author: yanghuiqi
+ * @Date: 2021-07-06 10:37:01
+ * @LastEditTime: 2021-08-16 10:15:32
+ * @LastEditors: yhq
+-->
+
+<h2 id="CreateElement"><a href="#CreateElement" class="headerlink" title="CreateElement"></a>CreateElement</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 虚拟 DOM 结构</span></span><br><span class="line"><span class="keyword">const</span> element = &#123;</span><br><span class="line">  <span class="attr">type</span>: <span class="string">&quot;div&quot;</span>, <span class="comment">// 标签名</span></span><br><span class="line">  <span class="attr">props</span>: &#123;</span><br><span class="line">    <span class="comment">// 节点属性，包含 children</span></span><br><span class="line">    <span class="attr">title</span>: <span class="string">&quot;foo&quot;</span>, <span class="comment">// title 属性</span></span><br><span class="line">    <span class="attr">children</span>: <span class="string">&quot;hello&quot;</span>, <span class="comment">// 子节点，注：实际上这里应该是数组结构，帮助我们存储更多子节点</span></span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">createElement</span> = (<span class="params">type, props, ...children</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    type,</span><br><span class="line">    <span class="attr">props</span>: &#123;</span><br><span class="line">      ...props,</span><br><span class="line">      <span class="attr">children</span>: children.<span class="title function_">map</span>(<span class="function">(<span class="params">child</span>) =&gt;</span></span><br><span class="line">        <span class="keyword">typeof</span> child === <span class="string">&quot;object&quot;</span> ? child : <span class="title function_">createTextElement</span>(child)</span><br><span class="line">      ),</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">createTextElement</span> = (<span class="params">text</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="attr">type</span>: <span class="string">&quot;TYPE_TEXT&quot;</span>,</span><br><span class="line">    <span class="attr">props</span>: &#123;</span><br><span class="line">      <span class="attr">nodeValue</span>: text,</span><br><span class="line">      <span class="attr">children</span>: [],</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Render"><a href="#Render" class="headerlink" title="Render"></a>Render</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 虚拟Dom，添加到真实节点</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">render</span>(<span class="params">element, container</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> dom =</span><br><span class="line">    element.<span class="property">type</span> === <span class="string">&quot;TEXT_ELEMENT&quot;</span></span><br><span class="line">      ? <span class="variable language_">document</span>.<span class="title function_">createTextNode</span>(<span class="string">&quot;&quot;</span>)</span><br><span class="line">      : <span class="variable language_">document</span>.<span class="title function_">createElement</span>(element.<span class="property">type</span>);</span><br><span class="line">  <span class="comment">// 遍历所有子节点，并进行渲染</span></span><br><span class="line">  element.<span class="property">props</span>.<span class="property">children</span>.<span class="title function_">forEach</span>(<span class="function">(<span class="params">child</span>) =&gt;</span> <span class="title function_">render</span>(child, dom));</span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">isProperty</span> = (<span class="params">key</span>) =&gt; key !== <span class="string">&quot;children&quot;</span>;</span><br><span class="line">  <span class="comment">// 将element的props属性添加到dom</span></span><br><span class="line">  <span class="title class_">Object</span>.<span class="title function_">keys</span>(element.<span class="property">props</span>)</span><br><span class="line">    .<span class="title function_">filter</span>(isProperty)</span><br><span class="line">    .<span class="title function_">forEach</span>(<span class="function">(<span class="params">name</span>) =&gt;</span> &#123;</span><br><span class="line">      dom[name] = element.<span class="property">props</span>[name];</span><br><span class="line">    &#125;);</span><br><span class="line">  container.<span class="title function_">appendChild</span>(dom);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="并发模式-（requestIdleCallback）"><a href="#并发模式-（requestIdleCallback）" class="headerlink" title="并发模式 （requestIdleCallback）"></a>并发模式 （requestIdleCallback）</h2><h2 id="fiber"><a href="#fiber" class="headerlink" title="fiber"></a>fiber</h2><h2 id="虚拟-Dom"><a href="#虚拟-Dom" class="headerlink" title="虚拟 Dom"></a>虚拟 Dom</h2><h3 id="构建虚拟-Dom"><a href="#构建虚拟-Dom" class="headerlink" title="构建虚拟 Dom"></a>构建虚拟 Dom</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(</span><br><span class="line">  <span class="title function_">el</span>(<span class="string">&quot;div&quot;</span>, &#123; <span class="attr">id</span>: <span class="string">&quot;container&quot;</span> &#125;, [</span><br><span class="line">    <span class="title function_">el</span>(<span class="string">&quot;h1&quot;</span>, &#123; <span class="attr">style</span>: <span class="string">&quot;color: red&quot;</span> &#125;, [<span class="string">&quot;simple virtal dom&quot;</span>]),</span><br><span class="line">  ])</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Element</span>(<span class="params">tagName, props = &#123;&#125;, children = []</span>) &#123;</span><br><span class="line">  <span class="comment">// 标签名</span></span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">tagName</span> = tagName;</span><br><span class="line">  <span class="comment">// 属性对象</span></span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">props</span> = props;</span><br><span class="line">  <span class="comment">// 子节点</span></span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">children</span> = children;</span><br><span class="line">  <span class="comment">// key标志</span></span><br><span class="line">  <span class="keyword">const</span> &#123; key = <span class="keyword">void</span> <span class="number">666</span> &#125; = <span class="variable language_">this</span>.<span class="property">props</span>;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">key</span> = key;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 子节点数量</span></span><br><span class="line">  <span class="keyword">let</span> count = <span class="number">0</span>;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">children</span>.<span class="title function_">forEach</span>(<span class="function">(<span class="params">child, index</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (child <span class="keyword">instanceof</span> <span class="title class_">Element</span>) &#123;</span><br><span class="line">      count += child.<span class="property">count</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    count++;</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">count</span> = count;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="虚拟-Dom-转换为真实-Dom"><a href="#虚拟-Dom-转换为真实-Dom" class="headerlink" title="虚拟 Dom 转换为真实 Dom"></a>虚拟 Dom 转换为真实 Dom</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Element</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">render</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="comment">// 根据tag创建一个标签</span></span><br><span class="line">  <span class="keyword">const</span> el = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="variable language_">this</span>.<span class="property">tagName</span>);</span><br><span class="line">  <span class="keyword">const</span> props = <span class="variable language_">this</span>.<span class="property">props</span>;</span><br><span class="line">  <span class="comment">// 遍历props给标签赋属性</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">const</span> propName <span class="keyword">in</span> props) &#123;</span><br><span class="line">    <span class="keyword">const</span> propValue = props[propName];</span><br><span class="line">    _.<span class="title function_">setAttr</span>(el, propName, propValue);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 遍历子结点</span></span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">children</span>.<span class="title function_">forEach</span>(<span class="function">(<span class="params">child</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> childEl;</span><br><span class="line">    <span class="comment">// 如果子结点的原型指向El 继续创建标签 属性赋值</span></span><br><span class="line">    <span class="keyword">if</span> (child <span class="keyword">instanceof</span> <span class="title class_">Element</span>) &#123;</span><br><span class="line">      <span class="comment">// 进行递归子结点 el(&quot;h1&quot;,&#123;style:&quot;color:red&quot;&#125;)</span></span><br><span class="line">      childEl = child.<span class="title function_">render</span>();</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="comment">// 子结点非指向EL，就创建文本标签</span></span><br><span class="line">      childEl = <span class="variable language_">document</span>.<span class="title function_">createTextNode</span>(child);</span><br><span class="line">    &#125;</span><br><span class="line">    el.<span class="title function_">appendChild</span>(childEl);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> el;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="填充页面"><a href="#填充页面" class="headerlink" title="填充页面"></a>填充页面</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">appendChild</span>(</span><br><span class="line">  <span class="title function_">el</span>(<span class="string">&quot;div&quot;</span>, &#123; <span class="attr">id</span>: <span class="string">&quot;container&quot;</span> &#125;, [</span><br><span class="line">    <span class="title function_">el</span>(<span class="string">&quot;h1&quot;</span>, &#123; <span class="attr">style</span>: <span class="string">&quot;color: red&quot;</span> &#125;, [<span class="string">&quot;simple virtal dom&quot;</span>]),</span><br><span class="line">  ]).<span class="title function_">render</span>()</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<h2 id="对比两棵树的差距"><a href="#对比两棵树的差距" class="headerlink" title="对比两棵树的差距"></a>对比两棵树的差距</h2><h3 id="当新旧节点都是字符串类型时，直接替换"><a href="#当新旧节点都是字符串类型时，直接替换" class="headerlink" title="当新旧节点都是字符串类型时，直接替换"></a>当新旧节点都是字符串类型时，直接替换</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (_.<span class="title function_">isString</span>(oldNode) &amp;&amp; _.<span class="title function_">isString</span>(newNode)) &#123;</span><br><span class="line">  currentNode.<span class="title function_">push</span>(&#123; <span class="attr">type</span>: patch.<span class="property">type</span>, <span class="attr">content</span>: newNode &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="新旧节点标签名和-key-相同，对比-porps-和-children"><a href="#新旧节点标签名和-key-相同，对比-porps-和-children" class="headerlink" title="新旧节点标签名和 key 相同，对比 porps 和 children"></a>新旧节点标签名和 key 相同，对比 porps 和 children</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (oldNode.<span class="property">tagName</span> === newNode.<span class="property">tagName</span> &amp;&amp; oldNode.<span class="property">key</span> === newNode.<span class="property">key</span>) &#123;</span><br><span class="line">  <span class="comment">// Diff props</span></span><br><span class="line">  <span class="keyword">var</span> propsPatches = <span class="title function_">diffProps</span>(oldNode, newNode);</span><br><span class="line">  <span class="keyword">if</span> (propsPatches) &#123;</span><br><span class="line">    currentPatch.<span class="title function_">push</span>(&#123; <span class="attr">type</span>: patch.<span class="property">PROPS</span>, <span class="attr">props</span>: propsPatches &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// Diff children. If the node has a `ignore` property, do not diff children</span></span><br><span class="line">  <span class="keyword">if</span> (!<span class="title function_">isIgnoreChildren</span>(newNode)) &#123;</span><br><span class="line">    <span class="title function_">diffChildren</span>(</span><br><span class="line">      oldNode.<span class="property">children</span>,</span><br><span class="line">      newNode.<span class="property">children</span>,</span><br><span class="line">      index,</span><br><span class="line">      patches,</span><br><span class="line">      currentPatch</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="对真实-DOM-进行修改"><a href="#对真实-DOM-进行修改" class="headerlink" title="对真实 DOM 进行修改"></a>对真实 DOM 进行修改</h2><h3 id="据-diff-结果，对真实-DOM-进行修改。"><a href="#据-diff-结果，对真实-DOM-进行修改。" class="headerlink" title="据 diff 结果，对真实 DOM 进行修改。"></a>据 diff 结果，对真实 DOM 进行修改。</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">patch</span>(<span class="params">node, patches</span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> walker = &#123; <span class="attr">index</span>: <span class="number">0</span> &#125;;</span><br><span class="line">  <span class="title function_">dfsWalk</span>(node, walker, patches);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">dfsWalk</span>(<span class="params">node, walker, patches</span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> currentPatches = patches[walker.<span class="property">index</span>];</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> len = node.<span class="property">childNodes</span> ? node.<span class="property">childNodes</span>.<span class="property">length</span> : <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">    <span class="keyword">var</span> child = node.<span class="property">childNodes</span>[i];</span><br><span class="line">    walker.<span class="property">index</span>++;</span><br><span class="line">    <span class="title function_">dfsWalk</span>(child, walker, patches);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (currentPatches) &#123;</span><br><span class="line">    <span class="title function_">applyPatches</span>(node, currentPatches);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="hooks"><a href="#hooks" class="headerlink" title="hooks"></a>hooks</h2>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2025/04/21/pool/" rel="prev" title="Pool">
+      <i class="fa fa-chevron-left"></i> Pool
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2025/04/21/regular/" rel="next" title="Regular">
+      Regular <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CreateElement"><span class="nav-number">1.</span> <span class="nav-text">CreateElement</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Render"><span class="nav-number">2.</span> <span class="nav-text">Render</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B9%B6%E5%8F%91%E6%A8%A1%E5%BC%8F-%EF%BC%88requestIdleCallback%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">并发模式 （requestIdleCallback）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fiber"><span class="nav-number">4.</span> <span class="nav-text">fiber</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%99%9A%E6%8B%9F-Dom"><span class="nav-number">5.</span> <span class="nav-text">虚拟 Dom</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E5%BB%BA%E8%99%9A%E6%8B%9F-Dom"><span class="nav-number">5.1.</span> <span class="nav-text">构建虚拟 Dom</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%99%9A%E6%8B%9F-Dom-%E8%BD%AC%E6%8D%A2%E4%B8%BA%E7%9C%9F%E5%AE%9E-Dom"><span class="nav-number">6.</span> <span class="nav-text">虚拟 Dom 转换为真实 Dom</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A1%AB%E5%85%85%E9%A1%B5%E9%9D%A2"><span class="nav-number">7.</span> <span class="nav-text">填充页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E6%AF%94%E4%B8%A4%E6%A3%B5%E6%A0%91%E7%9A%84%E5%B7%AE%E8%B7%9D"><span class="nav-number">8.</span> <span class="nav-text">对比两棵树的差距</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BD%93%E6%96%B0%E6%97%A7%E8%8A%82%E7%82%B9%E9%83%BD%E6%98%AF%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B1%BB%E5%9E%8B%E6%97%B6%EF%BC%8C%E7%9B%B4%E6%8E%A5%E6%9B%BF%E6%8D%A2"><span class="nav-number">8.1.</span> <span class="nav-text">当新旧节点都是字符串类型时，直接替换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E6%97%A7%E8%8A%82%E7%82%B9%E6%A0%87%E7%AD%BE%E5%90%8D%E5%92%8C-key-%E7%9B%B8%E5%90%8C%EF%BC%8C%E5%AF%B9%E6%AF%94-porps-%E5%92%8C-children"><span class="nav-number">8.2.</span> <span class="nav-text">新旧节点标签名和 key 相同，对比 porps 和 children</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E7%9C%9F%E5%AE%9E-DOM-%E8%BF%9B%E8%A1%8C%E4%BF%AE%E6%94%B9"><span class="nav-number">9.</span> <span class="nav-text">对真实 DOM 进行修改</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8D%AE-diff-%E7%BB%93%E6%9E%9C%EF%BC%8C%E5%AF%B9%E7%9C%9F%E5%AE%9E-DOM-%E8%BF%9B%E8%A1%8C%E4%BF%AE%E6%94%B9%E3%80%82"><span class="nav-number">9.1.</span> <span class="nav-text">据 diff 结果，对真实 DOM 进行修改。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hooks"><span class="nav-number">10.</span> <span class="nav-text">hooks</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
